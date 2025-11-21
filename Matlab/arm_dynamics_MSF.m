@@ -35,6 +35,11 @@ function dX = arm_dynamics_MSF(t, X, params)
 
     ddl = M \ (tau - C*dp - D - G);
 
+    if any(isnan(ddl), 'all') || any(isinf(ddl), 'all')
+        ddl = [ 0.0; 0.0];
+    end
+
     dX = [dp; ddl];
+
 
 end
