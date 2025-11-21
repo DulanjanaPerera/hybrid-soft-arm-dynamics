@@ -1,23 +1,22 @@
 # Hybrid Soft Continuum Arm Dynamics (Modal Space Formulation)
 
-This repository contains MATLAB code to simulate the dynamics of a hybrid soft–rigid continuum arm using a modal joint–space formulation. The dynamic model is derived for a soft module actuated by three pneumatic muscle actuators (PMAs), and the current implementation uses the modal coordinates corresponding to PMA 2 and PMA 3.
+This repository contains MATLAB code to simulate the **joint-space dynamics** of a hybrid soft–rigid continuum arm using a **modal space formulation (MSF)**.  
+The model corresponds to a soft module actuated by **three pneumatic muscle actuators (PMAs)**, and the implemented dynamics use the modal coordinates associated with PMA 2 and PMA 3.
 
-The code implements the inertia, Coriolis/centrifugal, gravitational, and stiffness terms symbolically and provides a script to run and visualize the arm dynamics.
+The equations of motion implemented in the MATLAB functions are **analytically derived in Maple 2020**.  
+Both the **original Maple worksheet** and its **exported PDF** are provided in this repository for transparency and reproducibility.
 
-## Repository Structure
+---
 
-matlab/
-  runDynamicSimulation.m   % Main script to run the dynamic simulation and visualization
-  arm_dynamics_MSF.m      % ODE right-hand side for the modal dynamic model
-  M_jointspace_MSF.m      % Inertia matrix in joint space (modal form)
-  C_jointspace_MSF.m      % Coriolis-centrifugal matrix in joint space
-  G_and_K_jointspace_MSF.m% Gravity + stiffness generalized forces in joint space
-  backbonePos_xi_MSF.m    % Backbone position along arc-length parameter xi
+## Demo
 
-docs/
-  Dynamics for biomimetic continuum arms A Modal Approach.pdf
-  Hybrid Soft Robots Incorporating Stiff and Hard Elements.pdf
-  Novel Variable Stiffness Soft Robotic Gripper.pdf
+A short demo of the simulation and visualization is included as `demoVideo.mp4` in the root of the repository.
 
-
-
+```html
+<video src="https://github.com/DulanjanaPerera/hybrid-soft-arm-dynamics/raw/main/demoVideo.mp4"
+       controls
+       width="640">
+  Your browser does not support the video tag.  
+  You can download the video directly from
+  <a href="https://github.com/DulanjanaPerera/hybrid-soft-arm-dynamics/raw/main/demoVideo.mp4">this link</a>.
+</video>
